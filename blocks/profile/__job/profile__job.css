@@ -1,0 +1,21 @@
+.profile__job {
+    color: white;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0;
+    padding-top: 10px;
+    max-width: 336px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    .profile__job {
+        font-size: 14px;
+        line-height: 16.94px;
+        padding: 0;
+        margin-left: 19px;
+    }
+}

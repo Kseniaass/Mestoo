@@ -1,0 +1,6 @@
+.element__description {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding-left: 21px;
+}

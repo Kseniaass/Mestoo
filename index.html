@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./pages/index.css">
+    <title>Mesto</title>
+</head>
+
+<body class="page">
+    <header class="header">
+        <img class="header__logo" src="./images/logo.svg" alt="Логотип Место Россия">
+    </header>
+
+    <main class="main">
+        <section class="profile">
+            <div class="profile__avatar-and-info">
+                <img class="profile__avatar" src="./images/Kusto.png" alt="Автар пользователя">
+                <div class="profile__info">
+                    <div class="profile__title">
+                        <h1 class="profile__name">Жак-Ив Кусто</h1>
+                        <button type="button" aria-label="Кнопка" class="profile__edit"></button>
+                    </div>
+                    <p class="profile__job">Исследователь Океана</p>
+                </div>
+            </div>
+            <button class="profile__add-button" type="button"></button>
+        </section>
+
+        <section class="elements"></section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__copyright">&copy;&nbsp;2022 Mesto Russia</p>
+    </footer>
+
+    <div class="popup popup_type_profile">
+        <div class="popup__container">
+            <button type="button" aria-label="Кнопка закрыть попап" class="popup__close-button"></button>
+            <h3 class="popup__title">Редактировать профиль</h3>
+            <form name="edit-form" class="popup-edit-form popup__form" novalidate>
+                <input type="text" name="popup__name" placeholder="Ваше имя" minlength="2" maxlength="40" required
+                    class="popup__input popup__input_type_name" id="input-edit-name">
+                <span id="input-edit-name-error" class="popup__error"></span>
+                <input type="text" name="popup__job" placeholder="Ваша профессия" minlength="2" maxlength="200" required
+                    class="popup__input popup__input_type_job" id="input-edit-job">
+                <span id="input-edit-job-error" class="popup__error"></span>
+                <button type="submit" class="popup__submit-button popup__button">Сохранить</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="popup popup_type_create-card">
+        <div class="popup__container">
+            <button type="button" aria-label="Кнопка закрытия" class="popup__close-button"></button>
+            <h3 class="popup__title">Новое место</h3>
+            <form name="add-form" class="popup__form popup-add-form" novalidate>
+                <input type="text" name="popup__name" placeholder="Название" minlength="2" maxlength="30" required
+                    class="popup__input popup__input_type_place" id="input-add-place">
+                    <span id="input-add-place-error" class="popup__error"></span>
+                <input type="url" name="popup__job" placeholder="Ссылка на картинку"
+                    class="popup__input popup__input_type_link" id="input-edit-url" required>
+                    <span id="input-edit-url-error" class="popup__error"></span>
+                <button type="submit" class="popup__create-button popup__button">Создать</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="popup-big-picture" class="popup popup_type_big-picture">
+        <div class="popup__container">
+            <button type="button" aria-label="Кнопка закрыть попап" class="popup__close-button"></button>
+            <img class="popup__image" alt=" ">
+            <p class="popup__description"></p>
+        </div>
+    </div>
+
+      <template class="card__template">
+        <article class="element">
+            <button type="button" aria-label="Кнопка удалить" class="element__delete-button"></button>
+            <img class="element__image" src="#" alt="#">
+            <div class="element__vector-like">
+                <h2 class="element__caption"></h2>
+                <button type="button" aria-label="Кнопка лайк" class="element__like"></button>
+            </div>
+        </article>
+    </template>
+
+    <script src="./scripts/validation.js"></script>
+    <script type="module" src="scripts/index.js"></script>
+</body>
+
+</html>
